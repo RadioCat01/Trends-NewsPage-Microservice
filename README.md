@@ -31,7 +31,8 @@ Send real-time notifications and alerts for breaking news, stock market changes,
    #### Interactive Dashboard:
 Design a user-friendly and interactive dashboard using modern front-end technologies (e.g., Angular or React).
         Display data in various formats, such as cards, charts, and graphs.
-
+        
+---
 ### Microservices Architecture
 
 ####  User Service:
@@ -57,7 +58,8 @@ Fetches weather data from OpenWeatherMap or similar APIs.
   ####  Notification Service:
 Manages real-time notifications and alerts using Kafka.
         Customizes notifications based on user preferences.
-
+        
+---
 ### Technology Stack
   Backend: Spring Boot WebFlux, R2DBC, Kafka
     Frontend: Angular or React
