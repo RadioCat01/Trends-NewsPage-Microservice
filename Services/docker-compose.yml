@@ -1,0 +1,35 @@
+services:
+  postgres:
+    container_name: News-page-users
+    image: postgres
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - 5432:5432
+    networks:
+      - News-net
+    restart: unless-stopped
+
+  keycloak:
+    container_name: keycloak-News
+    image: quay.io/keycloak/keycloak:24.0.2
+    ports:
+      - 9098:8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    networks:
+      - News-net
+    command:
+      - "start-dev"
+
+networks:
+  News-net:
+    driver: bridge
+
+volumes:
+  postgres:

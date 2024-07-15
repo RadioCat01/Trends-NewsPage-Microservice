@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Services/Gateway/Gateway (1) (com.Ecom).iml" filepath="$PROJECT_DIR$/Services/Gateway/Gateway (1) (com.Ecom).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Personalized-News-and-Tends-Dashboard.iml" filepath="$PROJECT_DIR$/.idea/Personalized-News-and-Tends-Dashboard.iml" />
+    </modules>
+  </component>
+</project>

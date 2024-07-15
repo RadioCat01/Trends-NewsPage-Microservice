@@ -1,0 +1,14 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/News-page-users
+    username: username
+    password: password
+
+  flyway:
+    url: jdbc:postgresql://localhost:5432/News-page-users
+    user: username
+    password: password
+    enabled: true
+
+server:
+  port: 8082
