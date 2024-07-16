@@ -79,3 +79,44 @@ Allow users to share interesting articles and trends on social media platforms.
  Develop a mobile app version of the dashboard for Android and iOS.
 
 This project combines various technologies and APIs to create a comprehensive and engaging platform for users to stay informed about their interests.
+
+
+---
+# Development
+
+### MicroService Architecture
+
+#### Config + Discovery 
+
+---
+#### Gateway
+Configured the security chain and filter to pass the Keycloak Id in passing request's header
+
+      Oauhth2 Resource Server
+      Spring WebFlux
+      Reactive Gateway
+      + + + +
+
+#### User
+Accepts Request with preferences in request body and headers to save user ( if not already exists )
+
+      Data JPA
+      Spring Web
+      PostgreSQL
+      + + + + 
+
+
+### Frontend
+configured keycloak service, token Inteceptor, Auth Guard to work with key cloak 
+
+
+
+
+
+
+
+
+
+
+
+
