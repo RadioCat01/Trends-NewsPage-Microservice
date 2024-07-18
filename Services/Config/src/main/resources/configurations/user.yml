@@ -1,8 +1,14 @@
 spring:
-  r2dbc:
-    url: r2dbc:postgresql://localhost:5432/News-page-users
+  datasource:
+    url: jdbc:postgresql://localhost:5432/News-page-users
     username: username
     password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   flyway:
     url: jdbc:postgresql://localhost:5432/News-page-users

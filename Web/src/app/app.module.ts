@@ -8,6 +8,11 @@ import { KeycloakService } from './Services/Keycloak/keycloak.service';
 import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { HttpTokenInterceptor } from './Services/interceptor/http-token.interceptor';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { UserLoginPopupComponent } from './Components/user-login-popup/user-login-popup.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function kcFactory(kcService: KeycloakService){
   return () =>kcService.init();
@@ -17,11 +22,16 @@ export function kcFactory(kcService: KeycloakService){
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    UserLoginPopupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
   providers: [
     HttpClient,

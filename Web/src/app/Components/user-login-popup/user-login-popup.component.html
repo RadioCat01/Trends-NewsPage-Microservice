@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Select Your Preferences</h1>
+<div mat-dialog-content>
+  <button mat-button [ngClass]="{'selected': preferencesForm.get('preference1')?.value}" (click)="togglePreference('preference1')">
+    Global Politics
+  </button>
+  <button mat-button [ngClass]="{'selected': preferencesForm.get('preference2')?.value}" (click)="togglePreference('preference2')">
+    Technology
+  </button>
+  <button mat-button [ngClass]="{'selected': preferencesForm.get('preference3')?.value}" (click)="togglePreference('preference3')">
+    Agriculture
+  </button>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onSave()" [disabled]="!preferencesForm.valid">Save</button>
+</div>

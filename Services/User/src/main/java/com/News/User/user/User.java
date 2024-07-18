@@ -1,9 +1,7 @@
 package com.News.User.user;
 
+import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
-
 import java.util.List;
 
 @Getter
@@ -11,11 +9,15 @@ import java.util.List;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 @Table(name = "users")
 public class User {
 
     @Id
+    @GeneratedValue
     private Integer Id;
+
+    @Column(nullable = false, unique = true)
     private String keyCloakId;
     private List<String> preferences;
 
