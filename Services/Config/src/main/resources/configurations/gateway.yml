@@ -9,5 +9,9 @@ spring:
           uri: lb:http://USER
           predicates:
             - Path=/user/**
+        - id: news
+          uri: lb:http://NEWS
+          predicates:
+            - Path=/news/**
 server:
   port: 8081
