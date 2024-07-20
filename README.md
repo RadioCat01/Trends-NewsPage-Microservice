@@ -112,6 +112,8 @@ configured keycloak service, token Inteceptor, Auth Guard to work with key cloak
 #### NewsAPi
 used web client to fetch news from news api
 
+#### FinanceAPI
+
 
 
 
