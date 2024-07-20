@@ -110,6 +110,7 @@ Accepts Request with preferences in request body and headers to save user ( if n
 configured keycloak service, token Inteceptor, Auth Guard to work with key cloak 
 
 #### NewsAPi
+used web client to fetch news from news api
 
 
 
