@@ -1,1 +1,9 @@
-<p>landing works!</p>
+<app-nav></app-nav>
+<div class="news-container">
+  <app-news-card
+    *ngFor="let article of articles; let i = index"
+    [article]="article"
+    [cardClass]="getCardClass(i)"
+    (click)="openNewsDialog(article)">
+  </app-news-card>
+</div>

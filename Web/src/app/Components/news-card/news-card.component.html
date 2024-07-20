@@ -1,0 +1,6 @@
+<div [ngClass]="cardClass">
+  <h2>{{ article.title }}</h2>
+  <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}">
+  <p>{{ article.description }}</p>
+  <a [href]="article.url" target="_blank">Read more</a>
+</div>

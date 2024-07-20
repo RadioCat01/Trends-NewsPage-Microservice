@@ -12,7 +12,11 @@ import { UserLoginPopupComponent } from './Components/user-login-popup/user-logi
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewsCardComponent } from './Components/news-card/news-card.component';
+import { CommonModule } from '@angular/common';
+import { NavComponent } from './Components/nav/nav.component';
+import { NewsPageComponent } from './Components/news-page/news-page.component';
 
 export function kcFactory(kcService: KeycloakService){
   return () =>kcService.init();
@@ -23,7 +27,10 @@ export function kcFactory(kcService: KeycloakService){
   declarations: [
     AppComponent,
     LandingComponent,
-    UserLoginPopupComponent
+    UserLoginPopupComponent,
+    NewsCardComponent,
+    NavComponent,
+    NewsPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,9 @@ export function kcFactory(kcService: KeycloakService){
     HttpClientModule,
     MatDialogModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    FormsModule
   ],
   providers: [
     HttpClient,

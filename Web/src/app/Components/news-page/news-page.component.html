@@ -1,0 +1,7 @@
+<div class="news-dialog-content">
+    <h2>{{ article.title }}</h2>
+    <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}">
+    <p>{{ article.description }}</p>
+    <p>{{ article.content }}</p>
+    <a [href]="article.url" target="_blank">Read more</a>
+  </div>

@@ -4,7 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,5 +34,11 @@ public class UserService {
     public ResponseEntity<Boolean> checkUser(String userId) {
         Optional<User> user = repo.findByKCId(userId);
         return ResponseEntity.ok(user.isPresent());
+    }
+
+    public Mono<List<String>> getPref(String userId) {
+        Optional<User> user = repo.findByKCId(userId);
+        List<String> preferences = user.map(User::getPreferences).orElse(Collections.emptyList());
+        return Mono.just(preferences);
     }
 }

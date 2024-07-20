@@ -1,0 +1,52 @@
+:host {
+  display: block;
+}
+
+.small-card {
+  padding: 20px;
+  width: 200px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: transform 0.3s ease;
+  grid-column: span 1;
+}
+
+.large-card {
+  padding: 20px;
+  width: 400px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: transform 0.3s ease;
+  grid-column: span 5;
+  grid-row: span 5;
+}
+
+.small-card:hover, .large-card:hover {
+  transform: scale(1.05);
+}
+
+.small-card img, .large-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.small-card h2, .large-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.small-card p, .large-card p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.small-card a, .large-card a {
+  font-weight: bold;
+  color: #007bbc;
+  text-decoration: none;
+}
+
+.small-card a:hover, .large-card a:hover {
+  text-decoration: underline;
+}

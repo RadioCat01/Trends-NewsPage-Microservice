@@ -3,7 +3,6 @@ package com.News.User.user;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
@@ -28,6 +27,13 @@ public class UserController {
             @RequestHeader("User-ID") String UserId
     ){
         return service.checkUser(UserId);
+    }
+
+    @GetMapping("/getPref")
+    public Mono<List<String>> getPrefById(
+            @RequestParam("id") String id
+    ){
+        return service.getPref(id);
     }
 
     @GetMapping
