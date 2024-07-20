@@ -113,7 +113,7 @@ configured keycloak service, token Inteceptor, Auth Guard to work with key cloak
 used web client to fetch news from news api
 
 #### FinanceAPI
-used web client to fetch finance data from
+used web client to fetch finance data from finance api
 
 
 
