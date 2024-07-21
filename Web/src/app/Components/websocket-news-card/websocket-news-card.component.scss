@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+.small-card {
+  padding: 20px;
+  width: 330px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: transform 0.3s ease;
+  grid-column: span 1;
+  position: relative;
+}
+
+.small-card:hover {
+  transform: scale(1.05);
+}
+
+.small-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.small-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.small-card p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.small-card a {
+  font-weight: bold;
+  color: #007bbc;
+  text-decoration: none;
+}
+
+.small-card a:hover {
+  text-decoration: underline;
+}

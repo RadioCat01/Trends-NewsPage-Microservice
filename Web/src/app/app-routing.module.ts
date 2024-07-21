@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './Pages/landing/landing.component';
 import { authGuard } from './Services/Guard/auth.guard';
 import { NewsPageComponent } from './Components/news-page/news-page.component';
-import { FinanceComponent } from './Components/finance/finance.component';
+import { WebsocketPageComponent } from './Pages/websocket-page/websocket-page.component';
 
 const routes: Routes = [
   {
@@ -19,8 +19,8 @@ const routes: Routes = [
     component: NewsPageComponent
   },
   {
-    path: "finance",
-    component: FinanceComponent
+    path: "websocket",
+    component: WebsocketPageComponent
   }
 ];
 

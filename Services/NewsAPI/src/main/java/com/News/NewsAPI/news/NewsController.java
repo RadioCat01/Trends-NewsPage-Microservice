@@ -28,8 +28,6 @@ public class NewsController {
         return newsService.search(pageSize, keyword);
     }
 
-
-
 }
 
 

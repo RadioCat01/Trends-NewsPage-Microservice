@@ -22,7 +22,8 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "types": ["node", "sockjs-client"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

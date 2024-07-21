@@ -17,6 +17,9 @@ import { NewsCardComponent } from './Components/news-card/news-card.component';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './Components/nav/nav.component';
 import { NewsPageComponent } from './Components/news-page/news-page.component';
+import { WebsocketPageComponent } from './Pages/websocket-page/websocket-page.component';
+import { WebsocketNewsCardComponent } from './Components/websocket-news-card/websocket-news-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function kcFactory(kcService: KeycloakService){
   return () =>kcService.init();
@@ -31,6 +34,8 @@ export function kcFactory(kcService: KeycloakService){
     NewsCardComponent,
     NavComponent,
     NewsPageComponent,
+    WebsocketPageComponent,
+    WebsocketNewsCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,8 @@ export function kcFactory(kcService: KeycloakService){
     MatCheckboxModule,
     ReactiveFormsModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     HttpClient,
