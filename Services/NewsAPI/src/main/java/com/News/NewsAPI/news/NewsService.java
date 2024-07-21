@@ -42,10 +42,10 @@ public class NewsService {
         this.newsWebSocketHandler= newsWebSocketHandler;
     }
 
-    @Scheduled(fixedRate = 20000) // Fetch and broadcast news every 60 seconds
+    @Scheduled(fixedRate = 120000)
     public void fetchAndBroadcastNews() {
 
-        getUpdates() // Replace "user-id" with actual user ID or handle multiple users
+        getUpdates()
                 .collectList()
                 .doOnNext(articles -> {
                     log.info("Broadcasting {} articles", articles.size());
@@ -67,7 +67,7 @@ public class NewsService {
                         .path("/Everything")
                         .queryParam("q", keyword)
                         .queryParam("from", LocalDate.now().minusDays(1))
-                        .queryParam("apikey", "f23c4fe55e434b2b94313c43cdcf44aa")
+                        .queryParam("apikey", "900ed6ff3c1144a2a096a074b9adb78a")
                         .queryParam("pageSize", 5)
                         .build()
                 )
@@ -85,7 +85,7 @@ public class NewsService {
                         .uri(uriBuilder -> uriBuilder
                                 .path("/Everything")
                                 .queryParam("q", key)
-                                .queryParam("apikey", "f23c4fe55e434b2b94313c43cdcf44aa")
+                                .queryParam("apikey", "900ed6ff3c1144a2a096a074b9adb78a")
                                 .queryParam("pageSize", pageSize)
                                 .build()
                         )
@@ -111,7 +111,7 @@ public class NewsService {
                 .uri(uriBuilder -> uriBuilder
                         .path("/Everything")
                         .queryParam("q", search)
-                        .queryParam("apikey", "f23c4fe55e434b2b94313c43cdcf44aa")
+                        .queryParam("apikey", "f900ed6ff3c1144a2a096a074b9adb78a")
                         .queryParam("pageSize", pageSize)
                         .build()
                 )

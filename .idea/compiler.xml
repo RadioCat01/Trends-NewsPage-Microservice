@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Discovery" />
         <module name="User" />
+        <module name="History" />
         <module name="Config" />
         <module name="Gateway" />
         <module name="NewsAPI" />
@@ -26,6 +27,7 @@
       <module name="Gateway" options="-parameters" />
       <module name="Gateway (1) (com.Ecom)" options="-parameters" />
       <module name="Gateway (1) (com.News)" options="-parameters" />
+      <module name="History" options="-parameters" />
       <module name="NewsAPI" options="-parameters" />
       <module name="User" options="-parameters" />
     </option>
