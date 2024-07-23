@@ -11,6 +11,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Table("userhistory")
+@Builder
 public class UserHistory {
 
     @Id
@@ -19,6 +20,23 @@ public class UserHistory {
     @Column("key_cloak_Id")
     private String key_cloak_id;
 
-    @Column("clicked_article")
-    private String clicked_article;
+    @Column("source_id")
+    private String sourceID;
+    @Column("source_name")
+    private String sourceName;
+    @Column("author")
+    private String author;
+    @Column("title")
+    private String title;
+    @Column("description")
+    private String description;
+    @Column("url")
+    private String url;
+    @Column("urltoimage")
+    private String urlToImage;
+    @Column("publishedat")
+    private String publishedAt;
+    @Column("content")
+    private String content;
+
 }

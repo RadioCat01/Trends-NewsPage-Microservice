@@ -1,0 +1,4 @@
+<h1>Last clicked</h1>
+<div class="news-container">
+  <app-history-news-card *ngFor="let article of articles" [article]="article" (click)="openNewsDialog(article)"></app-history-news-card>
+</div>

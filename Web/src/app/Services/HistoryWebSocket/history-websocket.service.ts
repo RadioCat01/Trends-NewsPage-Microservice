@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { Client } from '@stomp/stompjs';
+import { Subject } from 'rxjs';
 import { Article } from '../News/NewsService/news.service';
-import SockJS from 'sockjs-client';
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class WebSocketService {
-
+export class HistoryWebsocketService {
   private socket: WebSocket | undefined;
   private articlesSubject: Subject<Article[]> = new Subject<Article[]>();
   public articles$ = this.articlesSubject.asObservable();
@@ -19,10 +15,10 @@ export class WebSocketService {
   }
 
   private connect() {
-    this.socket = new WebSocket('ws://localhost:8083/ws/news'); // Adjust the URL if needed
+    this.socket = new WebSocket('ws://localhost:8085/ws/history'); // Adjust the URL if needed
 
     this.socket.onopen = () => {
-      console.log('WebSocket one connection established');
+      console.log('WebSocket two connection established');
     };
 
     this.socket.onmessage = (event) => {

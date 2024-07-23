@@ -42,7 +42,7 @@ public class NewsService {
         this.newsWebSocketHandler= newsWebSocketHandler;
     }
 
-    @Scheduled(fixedRate = 120000)
+    @Scheduled(fixedRate = 240000)
     public void fetchAndBroadcastNews() {
 
         getUpdates()

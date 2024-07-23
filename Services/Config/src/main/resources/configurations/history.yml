@@ -10,5 +10,16 @@ spring:
     password: password
     enabled: true
 
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: history-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+        spring.json.type.mapping: news:com.News.History.kafka.UserHistoryDTO
+
+
 server:
   port: 8085

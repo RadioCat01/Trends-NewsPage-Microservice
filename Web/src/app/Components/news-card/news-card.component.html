@@ -1,4 +1,4 @@
-<div [ngClass]="cardClass">
+<div [ngClass]="cardClass" (click)="onCardClick()">
   <h2>{{ article.title }}</h2>
   <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}">
   <p>{{ article.description }}</p>

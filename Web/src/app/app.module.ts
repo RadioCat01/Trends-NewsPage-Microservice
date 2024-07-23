@@ -20,6 +20,8 @@ import { NewsPageComponent } from './Components/news-page/news-page.component';
 import { WebsocketPageComponent } from './Pages/websocket-page/websocket-page.component';
 import { WebsocketNewsCardComponent } from './Components/websocket-news-card/websocket-news-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HistoryComponent } from './Pages/history/history.component';
+import { HistoryNewsCardComponent } from './Components/history-news-card/history-news-card.component';
 
 export function kcFactory(kcService: KeycloakService){
   return () =>kcService.init();
@@ -36,6 +38,9 @@ export function kcFactory(kcService: KeycloakService){
     NewsPageComponent,
     WebsocketPageComponent,
     WebsocketNewsCardComponent,
+    HistoryComponent,
+    HistoryNewsCardComponent,
+
   ],
   imports: [
     BrowserModule,

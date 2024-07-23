@@ -1,2 +1,11 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: news:com.News.NewsAPI.kafka.UserHistoryDTO
+
 server:
   port: 8083

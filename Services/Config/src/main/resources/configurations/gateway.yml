@@ -13,5 +13,9 @@ spring:
           uri: lb:http://NEWS
           predicates:
             - Path=/news/**
+        - id: history
+          uri: lb:http://History
+          predicates:
+            - Path=/history/**
 server:
   port: 8081

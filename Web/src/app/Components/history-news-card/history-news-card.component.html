@@ -1,4 +1,4 @@
-<div class="small-card" (click)="onCardClick()" @slideInOut>
+<div class="small-card" @slideInOut>
   <h2>{{ article.title }}</h2>
   <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}">
   <p>{{ article.description }}</p>
