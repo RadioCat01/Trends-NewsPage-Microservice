@@ -116,8 +116,7 @@ used web client to fetch news from news api
 used web client to fetch finance data from finance api.
 
 #### History service
-
-
+history service gets data from news service through kafka, and persists on postgresql database via r2dbc.
 
 
 
