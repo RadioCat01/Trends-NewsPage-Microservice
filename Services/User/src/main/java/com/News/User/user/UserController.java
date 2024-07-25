@@ -1,6 +1,7 @@
 package com.News.User.user;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
@@ -10,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
+@Slf4j
 public class UserController {
 
     private final UserService service;
@@ -38,6 +40,7 @@ public class UserController {
 
     @GetMapping
     public List<User> getUsers(){
+        log.info("get user called");
         return service.findAll();
     }
 }

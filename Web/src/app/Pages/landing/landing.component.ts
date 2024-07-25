@@ -23,7 +23,7 @@ export class LandingComponent {
     public dialog: MatDialog,
     public checkUser: CheckUSerService,
     private newsService: NewsService,
-    private sharedService: SharedService // Inject the shared service
+    private sharedService: SharedService 
   ) {}
 
   ngOnInit(): void {
@@ -49,15 +49,16 @@ export class LandingComponent {
     this.sharedService.loadArticles$.subscribe(() => {
       this.loadArticles();
     });
-  
-  
     this.loadArticles();
-  
+  }
 
-    this.sharedService.articles$.subscribe(articles => {
-      this.articles = articles;
-    });
-    
+  searchActivated = false;
+
+  onSearchButtonClick() {
+    this.searchActivated = true;
+  }
+  onCloseButton(){
+    this.searchActivated = false;
   }
 
   openDialog() {

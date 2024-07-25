@@ -4,6 +4,7 @@ import com.News.NewsAPI.kafka.DTOMapper;
 import com.News.NewsAPI.kafka.Producer;
 import com.News.NewsAPI.kafka.UserHistoryDTO;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
@@ -11,6 +12,7 @@ import reactor.core.publisher.Flux;
 @RestController
 @RequestMapping("/news")
 @RequiredArgsConstructor
+@Slf4j
 public class NewsController {
 
     private final NewsService newsService;
@@ -22,6 +24,8 @@ public class NewsController {
             @RequestParam(value = "pageSize", defaultValue = "5") int pageSize,
             @RequestHeader("User-ID") String userId
             ) {
+
+        log.info("getting news on preferences");
         newsService.fetchAndBroadcastNews();
         return newsService.getNews(pageSize, userId);
     }
@@ -31,6 +35,7 @@ public class NewsController {
             @RequestParam(value = "pageSize", defaultValue = "5") int pageSize,
             @RequestParam(value = "keyword") String keyword
     ) {
+        log.info("getting news on search");
         return newsService.search(pageSize, keyword);
     }
 

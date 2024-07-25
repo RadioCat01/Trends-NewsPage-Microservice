@@ -1,0 +1,5 @@
+<h1>Search</h1>
+<button (click)="close()">Close</button>
+<div class="news-container">
+  <app-websocket-news-card *ngFor="let article of articles" [article]="article" (click)="openNewsDialog(article)"></app-websocket-news-card>
+</div>

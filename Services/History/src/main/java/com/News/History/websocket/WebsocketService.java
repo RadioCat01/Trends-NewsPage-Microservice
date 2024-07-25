@@ -17,8 +17,11 @@ public class WebsocketService {
     private final HistoryRepository repository;
     private final Mapper mapper;
 
+    private static final String KEYCLOAK_ID_KEY = "keycloakId";
+
     public Mono<Void> sendAllNews() {
         System.out.println("Send history called");
+
         return repository.findAll()
                 .doOnNext(userHistory -> System.out.println("Fetched userHistory: " + userHistory))
                 .map(mapper::toArticle)
@@ -31,7 +34,9 @@ public class WebsocketService {
                 .doOnError(error -> System.err.println("Error sending news: " + error.getMessage()));
     }
 
-    public void getAllNews(){
+    public void getAllNews(String userid){
+
+
         System.out.println("getallnews triggered");
         repository.findAll()
                 .map(mapper::toArticle)

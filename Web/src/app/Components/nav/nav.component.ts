@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Article, NewsService } from '../../Services/News/NewsService/news.service';
 import { SharedService } from '../../Services/SharedService/shared.service';
 
@@ -18,17 +18,16 @@ export class NavComponent {
   ) {}
 
 
+  @Output() searchButtonClick = new EventEmitter<void>();
+
   searchNews(): void {
+    this.searchButtonClick.emit();
     if (this.keyword) {
       this.sharedNewsService.updateKeyword(this.keyword);
       this.newsService.getSearch(5, this.keyword).subscribe(data => {
         this.sharedNewsService.updateArticles(data);
       });
     }
-  }
-
-  home(): void {
-    this.sharedNewsService.triggerLoadArticles();
   }
 
 }

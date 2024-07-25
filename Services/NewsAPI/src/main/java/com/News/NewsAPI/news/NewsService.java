@@ -111,7 +111,7 @@ public class NewsService {
                 .uri(uriBuilder -> uriBuilder
                         .path("/Everything")
                         .queryParam("q", search)
-                        .queryParam("apikey", "f900ed6ff3c1144a2a096a074b9adb78a")
+                        .queryParam("apikey", "900ed6ff3c1144a2a096a074b9adb78a")
                         .queryParam("pageSize", pageSize)
                         .build()
                 )

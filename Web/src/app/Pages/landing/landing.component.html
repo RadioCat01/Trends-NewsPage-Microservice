@@ -1,5 +1,6 @@
 <div class="page">
-<app-nav></app-nav>
+<app-nav (searchButtonClick)="onSearchButtonClick()"></app-nav>
+<app-search *ngIf="searchActivated" (closebuttonClick)="onCloseButton()"></app-search>
 <app-websocket-page></app-websocket-page>
 <h1>Your Preferences</h1>
 <div class="news-container">

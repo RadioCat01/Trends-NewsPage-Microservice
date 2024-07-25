@@ -1,8 +1,6 @@
 package com.News.History.kafka;
 
 import com.News.History.history.HistoryService;
-import com.News.History.history.Mapper;
-import com.News.History.websocket.NewsWebSocketHandler;
 import com.News.History.websocket.WebsocketService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;

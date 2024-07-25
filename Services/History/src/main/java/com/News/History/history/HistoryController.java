@@ -1,5 +1,6 @@
 package com.News.History.history;
 
+import com.News.History.analytics.AnalyticService;
 import com.News.History.kafka.UserHistoryDTO;
 import com.News.History.websocket.WebsocketService;
 import lombok.Getter;
@@ -22,8 +23,20 @@ public class HistoryController {
     }
 
     @GetMapping("/get")
-    public void callHistory(){
-        websocketService.getAllNews();
+    public void callHistory(
+            @RequestHeader("User-ID") String userId
+    ){
+        websocketService.getAllNews(userId);
+    }
+
+
+
+    private final AnalyticService analyticService;
+
+    @GetMapping("/pref")
+    public void send(){
+        System.out.println("pref called");
+        analyticService.sendAllSourceNames();
     }
 
 
