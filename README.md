@@ -120,7 +120,7 @@ history service gets data from news service through kafka, and persists on postg
 then fetched and sent to frontend on request via websocket, and keep updating on user clicks 
 
 #### ELK Stack
-Dockerized Elastic search, Logstash, Kibana and logstash.conf
+Dockerized Elastic search, Logstash, Kibana and logstash.conf, logstasg.yml
 
 
 
