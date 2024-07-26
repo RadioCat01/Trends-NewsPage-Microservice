@@ -23,15 +23,11 @@ export class LandingComponent {
   ) {}
 
   ngOnInit(): void {
+
     this.checkUser.checkUser().subscribe(exists => {
       if (!exists) {
         this.openDialog();
       }
-    });
-
-
-    this.sharedService.preferencesUpdated$.subscribe(() => {
-      this.loadArticles();
     });
 
     this.sharedService.keyword$.subscribe(keyword => {
@@ -41,11 +37,6 @@ export class LandingComponent {
         });
       }
     });
-
-    this.sharedService.loadArticles$.subscribe(() => {
-      this.loadArticles();
-    });
-    this.loadArticles();
   }
 
   searchActivated = false;
@@ -63,26 +54,6 @@ export class LandingComponent {
       height: '800px',
       maxWidth: 'none',
     });
-  }
-
-  openNewsDialog(article: Article): void {
-    this.dialog.open(NewsPageComponent, {
-      data: { article: article },
-      enterAnimationDuration:200,
-      exitAnimationDuration:200
-    });
-  }
-
-
-
-  loadArticles(): void {
-    this.newsService.getNews().subscribe((data) => {
-      this.articles = data;
-    });
-  }
-
-  getCardClass(index: number): string {
-    return index % 3 === 0 ? 'small-card': 'large-card';
   }
 
 }

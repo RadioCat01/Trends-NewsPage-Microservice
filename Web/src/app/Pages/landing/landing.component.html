@@ -3,22 +3,16 @@
   <div class="cont">
 <app-search *ngIf="searchActivated" (closebuttonClick)="onCloseButton()"></app-search>
   <br>
+    <div id="sec1" class="d0">
 <app-websocket-page></app-websocket-page>
-  <br>
-  <div class="topPicks">
-    <h1>Top Picks</h1>
-    <div class="news-container">
-      <ng-container *ngFor="let article of articles; let i = index">
-        <ng-container *ngIf="(i + 1) % 5 === 0">
-          <app-history-news-card [article]="article" (click)="openNewsDialog(article)"></app-history-news-card>
-        </ng-container>
-        <ng-container *ngIf="(i + 1) % 5 !== 0">
-          <app-news-card [article]="article" (click)="openNewsDialog(article)"></app-news-card>
-        </ng-container>
-      </ng-container>
     </div>
-  </div>
+    <br>
+    <div id="sec2" class="d1">
+    <app-yor-preferences></app-yor-preferences>
+    </div>
   <br>
+    <div id="sec3" class="d2">
 <app-history></app-history>
+    </div>
   </div>
 </div>

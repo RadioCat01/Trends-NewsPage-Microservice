@@ -1,8 +1,42 @@
 .news-dialog-content {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: auto;
-    padding: 16px;
-    box-sizing: border-box;
-  }
+  background-color: #333; /* Dark background */
+  color: #f4f4f4; /* Light text color */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  max-width: 1200px; /* Max width of the content */
+  height: 1000px;
+  margin: auto; /* Centering the dialog */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow around the dialog */
+  font-family: Arial, sans-serif; /* Font family */
+}
+
+.news-dialog-content h2 {
+  color: #fff; /* Light color for the heading */
+  font-size: 24px; /* Font size for the heading */
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 10px; /* Space below the heading */
+  font-weight: 500;
+}
+
+.news-dialog-content img {
+  max-width: 100%; /* Ensure the image fits within the dialog */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Rounded corners for the image */
+  margin-bottom: 15px; /* Space below the image */
+}
+
+.news-dialog-content p {
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 15px; /* Space between paragraphs */
+  font-size: 20px;
+}
+
+.news-dialog-content a {
+  color: #1e90ff; /* Light blue color for the link */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the link bold */
+}
+
+.news-dialog-content a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

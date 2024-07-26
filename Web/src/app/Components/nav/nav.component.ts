@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Article, NewsService } from '../../Services/News/NewsService/news.service';
 import { SharedService } from '../../Services/SharedService/shared.service';
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-nav',
@@ -11,12 +12,20 @@ export class NavComponent {
 
   keyword: string = '';
   articles: Article[] = []; // Ensure you have the Article type defined
+  private scrollSubscription: Subscription | undefined;
+  activeFragment: string | undefined;
 
   constructor(
     private newsService: NewsService,
     private sharedNewsService: SharedService
   ) {}
 
+  ngOnInit(): void {
+    this.scrollSubscription = this.sharedNewsService.onScroll().subscribe(fragment => {
+      console.log('Detected fragment:', fragment); // Debugging log
+      this.activeFragment = fragment;
+    });
+  }
 
   @Output() searchButtonClick = new EventEmitter<void>();
 

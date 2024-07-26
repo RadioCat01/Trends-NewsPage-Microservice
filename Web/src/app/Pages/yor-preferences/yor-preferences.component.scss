@@ -1,23 +1,10 @@
 .news-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexibly sized columns */
-  column-gap: 5rem; /* Space between columns */
+  column-gap: 7rem; /* Space between columns */
   row-gap: 1em; /* Space between rows */
   max-width: 90%; /* Adjusted to increase the width */
   margin: 0 50px; /* Center the container horizontally */
-}
-
-app-nav{
-  position: fixed;
-  width: 100%;
-  background-color: #1a1a19;
-  z-index: 1000;
-}
-
-.cont{
-  margin-top: 110px;
-  width: 1700px;
-  margin-left: 00px;
 }
 
 .topPicks {
@@ -42,15 +29,4 @@ app-history-news-card {
 
 app-news-card {
   grid-column: span 1; /* Default for regular card */
-}
-.page{
-  background-color: #1a1a19;
-  padding-left: 0px;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.d0{
-  margin-top: 20px;
 }

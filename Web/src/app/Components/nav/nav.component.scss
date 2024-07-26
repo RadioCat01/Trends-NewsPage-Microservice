@@ -35,7 +35,7 @@
 .nav{
   padding-top: 20px;
   width: 100%;
-  height: 80px;
+  height: 100px;
   padding-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -46,7 +46,7 @@ span{
   color: #f57160;
   font-family: Brush Script MT, Brush Script Std, cursive;
   font-size: 60px;
-  position: absolute;
+  position: fixed;
   left: 80px;
 }
 .bi-clipboard-data-fill{
@@ -66,4 +66,36 @@ span{
   border-radius: 25px;
   position: absolute;
   right: 30px;
+}
+.cont{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 30px;
+}
+.topics{
+  display: flex;
+  position: fixed;
+  top: 90px;
+  width: 350px;
+  justify-content: space-between;
+}
+
+.topics a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px;
+  padding-bottom: 8px;
+}
+
+.topics a.active {
+  background-color: #545451;
+  font-weight: bold;
+  border-radius: 15px 15px 0 0;
+}
+html {
+  scroll-behavior: smooth;
 }

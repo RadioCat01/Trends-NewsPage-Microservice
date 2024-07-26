@@ -26,9 +26,11 @@ export class WebsocketPageComponent {
   openNewsDialog(article: Article): void {
     this.dialog.open(NewsPageComponent, {
       data: { article: article },
+      maxWidth:'none',
+      width:'1200px',
+      height:'100px',
       enterAnimationDuration:200,
       exitAnimationDuration:200
     });
   }
-
 }

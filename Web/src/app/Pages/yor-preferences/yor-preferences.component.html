@@ -1,0 +1,13 @@
+<div class="topPicks" id="sec2">
+  <h1>Top of Your Preferences</h1>
+  <div class="news-container">
+    <ng-container *ngFor="let article of articles; let i = index">
+      <ng-container *ngIf="(i + 1) % 5 === 0">
+        <app-history-news-card [article]="article" (click)="openNewsDialog(article)"></app-history-news-card>
+      </ng-container>
+      <ng-container *ngIf="(i + 1) % 5 !== 0">
+        <app-news-card [article]="article" (click)="openNewsDialog(article)"></app-news-card>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

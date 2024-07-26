@@ -27,6 +27,7 @@ import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {MatFormField, MatFormFieldModule, MatPrefix} from "@angular/material/form-field";
 import {MatInput, MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import {YorPreferencesComponent} from "./Pages/yor-preferences/yor-preferences.component";
 
 export function kcFactory(kcService: KeycloakService){
   return () =>kcService.init();
@@ -46,6 +47,7 @@ export function kcFactory(kcService: KeycloakService){
     HistoryComponent,
     HistoryNewsCardComponent,
     SearchComponent,
+    YorPreferencesComponent,
   ],
   imports: [
     BrowserModule,
