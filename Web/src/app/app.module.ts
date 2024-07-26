@@ -23,6 +23,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HistoryComponent } from './Pages/history/history.component';
 import { HistoryNewsCardComponent } from './Components/history-news-card/history-news-card.component';
 import { SearchComponent } from './Components/search/search.component';
+import {MatIcon, MatIconModule} from "@angular/material/icon";
+import {MatFormField, MatFormFieldModule, MatPrefix} from "@angular/material/form-field";
+import {MatInput, MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 export function kcFactory(kcService: KeycloakService){
   return () =>kcService.init();
@@ -42,7 +46,6 @@ export function kcFactory(kcService: KeycloakService){
     HistoryComponent,
     HistoryNewsCardComponent,
     SearchComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,11 @@ export function kcFactory(kcService: KeycloakService){
     ReactiveFormsModule,
     CommonModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     HttpClient,

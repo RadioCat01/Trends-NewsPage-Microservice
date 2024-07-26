@@ -15,7 +15,7 @@ export class KeycloakService {
       this.kc = new Keycloak({
         url: 'http://localhost:9098',
         realm: 'News-Page',
-        clientId: 'News-Page'
+        clientId: 'News-service'
       })
     }
 

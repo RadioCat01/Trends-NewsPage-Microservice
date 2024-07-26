@@ -1,6 +1,18 @@
-<div class="small-card" @slideInOut>
-  <h2>{{ article.title }}</h2>
-  <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}">
-  <p>{{ article.description }}</p>
-  <a [href]="article.url" target="_blank">Read more</a>
+<div class="card" (click)="onCardClick()">
+  <div class="card__header" [ngStyle]="{ 'background-image': 'url(' + article.urlToImage + ')' }">
+    <div class="card__body">
+      <small>
+        <span>{{article.author}}</span>
+        <span class="space">{{article.publishedAt}}</span>
+      </small>
+      <h4>{{article.title}}</h4>
+    <div class="card__footer">
+      <div class="user">
+        <div class="user__info">
+          <small><a [href]="article.url" target="_blank">Read more</a></small>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>

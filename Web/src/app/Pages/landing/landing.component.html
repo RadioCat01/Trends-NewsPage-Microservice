@@ -1,15 +1,24 @@
 <div class="page">
 <app-nav (searchButtonClick)="onSearchButtonClick()"></app-nav>
+  <div class="cont">
 <app-search *ngIf="searchActivated" (closebuttonClick)="onCloseButton()"></app-search>
+  <br>
 <app-websocket-page></app-websocket-page>
-<h1>Your Preferences</h1>
-<div class="news-container">
-  <app-news-card
-    *ngFor="let article of articles; let i = index"
-    [article]="article"
-    [cardClass]="getCardClass(i)"
-    (click)="openNewsDialog(article)">
-  </app-news-card>
-</div>
+  <br>
+  <div class="topPicks">
+    <h1>Top Picks</h1>
+    <div class="news-container">
+      <ng-container *ngFor="let article of articles; let i = index">
+        <ng-container *ngIf="(i + 1) % 5 === 0">
+          <app-history-news-card [article]="article" (click)="openNewsDialog(article)"></app-history-news-card>
+        </ng-container>
+        <ng-container *ngIf="(i + 1) % 5 !== 0">
+          <app-news-card [article]="article" (click)="openNewsDialog(article)"></app-news-card>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  <br>
 <app-history></app-history>
+  </div>
 </div>

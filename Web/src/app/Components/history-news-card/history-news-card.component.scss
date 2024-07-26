@@ -1,43 +1,60 @@
-:host {
-    display: block;
-  }
-  
-  .small-card {
-    padding: 20px;
-    width: 330px;
-    border: 1px solid #ccc;
-    background: #fff;
-    transition: transform 0.3s ease;
-    grid-column: span 1;
-    position: relative;
-  }
-  
-  .small-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .small-card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  .small-card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .small-card p {
-    font-size: 1em;
-    margin-bottom: 15px;
-  }
-  
-  .small-card a {
-    font-weight: bold;
-    color: #007bbc;
-    text-decoration: none;
-  }
-  
-  .small-card a:hover {
-    text-decoration: underline;
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em; /* Rounded corners */
+  overflow: hidden; /* Ensures content doesn't overflow the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  cursor: pointer; /* Cursor changes on hover */
+  transition: transform 0.2s; /* Smooth transition */
+  height: 420px;
+  width: clamp(46rem, calc(46rem + 2vw),50rem); /* Increase the width */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.card__header {
+  position: relative;
+  width: clamp(46rem, calc(46rem + 2vw), 50rem);
+  height: 420px;
+  background-size: cover; /* Cover the entire header area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+}
+
+.card__body {
+  position: absolute; /* Position the body inside the header */
+  bottom: 0; /* Align to the bottom of the header */
+  left: 0;
+  width: 100%;
+  padding: 16px; /* Space inside the body */
+  background: rgba(0, 0, 0, 0.5); /* Optional: background color with transparency for better text visibility */
+  color: #fff; /* Text color */
+
+}
+small{
+  width: 740px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.card__body small {
+  display: flex;
+  justify-content: space-between; /* Space out author and date */
+  font-size: 0.875rem;
+}
+
+.space {
+  margin-left: 1rem; /* Space between author and date */
+}
+
+.card__footer .user__info a {
+  text-decoration: none;
+  color: white; /* Link color */
+  font-weight: 500;
+}
+
+.card__footer .user__info a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

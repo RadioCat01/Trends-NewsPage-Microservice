@@ -1,6 +1,22 @@
-<div class="small-card" (click)="onCardClick()" @slideInOut>
-  <h2>{{ article.title }}</h2>
-  <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}">
-  <p>{{ article.description }}</p>
-  <a [href]="article.url" target="_blank">Read more</a>
+<div class="card" (click)="onCardClick()">
+  <div class="card">
+    <div class="card__header">
+      <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <small>
+        <span>{{article.author}}</span>
+        <span class="space">{{article.publishedAt}}</span>
+      </small>
+      <h4>{{article.title}}</h4>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <div class="user__info">
+          <br>
+          <small><a [href]="article.url" target="_blank">Read more</a></small>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

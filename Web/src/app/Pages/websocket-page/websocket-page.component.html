@@ -1,4 +1,6 @@
-<h1>Top Headlines</h1>
-<div class="news-container">
-  <app-websocket-news-card *ngFor="let article of articles" [article]="article" (click)="openNewsDialog(article)"></app-websocket-news-card>
+<div class="topPicks">
+  <h1>Top Headings</h1>
+  <div class="news-container">
+    <app-websocket-news-card *ngFor="let article of articles" [article]="article" (click)="openNewsDialog(article)"></app-websocket-news-card>
+  </div>
 </div>

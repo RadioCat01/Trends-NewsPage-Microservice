@@ -1,4 +1,13 @@
-<h1>Last clicked</h1>
-<div class="news-container">
-  <app-history-news-card *ngFor="let article of articles" [article]="article" (click)="openNewsDialog(article)"></app-history-news-card>
+<div class="topPicks">
+  <h1>Your Picks</h1>
+  <div class="news-container">
+    <ng-container *ngFor="let article of articles; let i = index">
+      <ng-container *ngIf="(i + 1) % 5 === 0">
+        <app-history-news-card [article]="article" (click)="openNewsDialog(article)"></app-history-news-card>
+      </ng-container>
+      <ng-container *ngIf="(i + 1) % 5 !== 0">
+        <app-news-card [article]="article" (click)="openNewsDialog(article)"></app-news-card>
+      </ng-container>
+    </ng-container>
+  </div>
 </div>

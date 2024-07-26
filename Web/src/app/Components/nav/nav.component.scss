@@ -1,0 +1,69 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #545452;
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  width: 800px;
+  height: 48px;
+}
+
+.search-input {
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  padding: 10px 15px;
+  flex: 1;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  background-color: #545452;
+  color: white;
+}
+
+.search-icon{
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.search-input::placeholder {
+  color: #d1d1d1;
+  font-weight: 520;
+}
+.nav{
+  padding-top: 20px;
+  width: 100%;
+  height: 80px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.1);
+}
+span{
+  color: #f57160;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 60px;
+  position: absolute;
+  left: 80px;
+}
+.bi-clipboard-data-fill{
+  color: #b9b9b9;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 40px;
+}
+.logout{
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  color: #c5c1c1;
+  font-weight: 500;
+  padding:10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  position: absolute;
+  right: 30px;
+}

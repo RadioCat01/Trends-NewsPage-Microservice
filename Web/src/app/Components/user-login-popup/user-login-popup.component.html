@@ -1,15 +1,33 @@
-<h1 mat-dialog-title>Select Your Preferences</h1>
-<div mat-dialog-content>
-  <button mat-button [ngClass]="{'selected': preferencesForm.get('technology')?.value}" (click)="togglePreference('technology')">
-    Global Politics
-  </button>
-  <button mat-button [ngClass]="{'selected': preferencesForm.get('sports')?.value}" (click)="togglePreference('sports')">
-    Technology
-  </button>
-  <button mat-button [ngClass]="{'selected': preferencesForm.get('health')?.value}" (click)="togglePreference('health')">
-    Agriculture
-  </button>
+<div class="pop">
+<h1>Select Your Preferences</h1>
+  <div class="pref">
+    <span [ngClass]="{'selected': preferencesForm.get('Technology')?.value}" (click)="togglePreference('Technology')">Technology</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Sports')?.value}" (click)="togglePreference('Sports')">Sports</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Global_Politics')?.value}" (click)="togglePreference('Global_Politics')">Global Politics</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Economy')?.value}" (click)="togglePreference('Economy')">Economy</span><br><br><br>
+    <span [ngClass]="{'selected': preferencesForm.get('Finance')?.value}" (click)="togglePreference('Finance')">Finance</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Gaming')?.value}" (click)="togglePreference('Gaming')">Gaming</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Automotive')?.value}" (click)="togglePreference('Automotive')">Automotive</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Science')?.value}" (click)="togglePreference('Science')">Science</span><br><br><br>
+    <span [ngClass]="{'selected': preferencesForm.get('Business')?.value}" (click)="togglePreference('Business')">Business</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Health')?.value}" (click)="togglePreference('Health')">Health</span>
+    <span [ngClass]="{'selected': preferencesForm.get('History')?.value}" (click)="togglePreference('History')">History</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Cryptocurrency')?.value}" (click)="togglePreference('Cryptocurrency')">Cryptocurrency</span><br><br><br>
+    <span [ngClass]="{'selected': preferencesForm.get('Philanthropy')?.value}" (click)="togglePreference('Philanthropy')">Philanthropy</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Parenting')?.value}" (click)="togglePreference('Parenting')">Parenting</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Music')?.value}" (click)="togglePreference('Music')">Music</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Space_Exploration')?.value}" (click)="togglePreference('Space_Exploration')">Space Exploration</span><br><br><br>
+    <span [ngClass]="{'selected': preferencesForm.get('Books_Literature')?.value}" (click)="togglePreference('Books_Literature')">Books & Literature</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Personal_Finance')?.value}" (click)="togglePreference('Personal_Finance')">Personal Finance</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Alternative_Medicine')?.value}" (click)="togglePreference('Alternative_Medicine')">Alternative Medicine</span><br><br><br>
+    <span [ngClass]="{'selected': preferencesForm.get('Home_Improvement')?.value}" (click)="togglePreference('Home_Improvement')">Home Improvement</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Artificial_Intelligence')?.value}" (click)="togglePreference('Artificial_Intelligence')">Artificial Intelligence</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Climate')?.value}" (click)="togglePreference('Climate')">Climate</span><br><br><br>
+    <span [ngClass]="{'selected': preferencesForm.get('Electric_Vehicles')?.value}" (click)="togglePreference('Electric_Vehicles')">Electric Vehicles</span>
+    <span [ngClass]="{'selected': preferencesForm.get('Economic_Recession')?.value}" (click)="togglePreference('Economic_Recession')">Economic Recession</span><br><br><br>
+    <span [ngClass]="{'selected': preferencesForm.get('Geopolitical_Tensions')?.value}" (click)="togglePreference('Geopolitical_Tensions')">Geopolitical Tensions</span>
+    <span [ngClass]="{'selected': preferencesForm.get('TechRegulations')?.value}" (click)="togglePreference('TechRegulations')">Tech Regulations</span><br><br><br>
+    <span [ngClass]="{'selected': preferencesForm.get('SocialMedia')?.value}" (click)="togglePreference('SocialMedia')">Social Media Trends</span>
+  <button  (click)="onSave()" [disabled]="!preferencesForm.valid" class="save">Save</button>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onSave()" [disabled]="!preferencesForm.valid">Save</button>
 </div>

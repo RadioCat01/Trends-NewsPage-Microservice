@@ -5,7 +5,7 @@ import { SharedService } from '../../Services/SharedService/shared.service';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.scss'
+  styleUrls: ['./nav.component.scss']  // Correct property name
 })
 export class NavComponent {
 

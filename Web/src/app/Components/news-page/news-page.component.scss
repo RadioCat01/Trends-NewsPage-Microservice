@@ -1,9 +1,8 @@
 .news-dialog-content {
     display: flex;
     flex-direction: column;
-    height: 100vh; // Full height of the viewport
-    overflow: auto; // Scroll if content exceeds viewport
-    padding: 16px; // Adjust padding as needed
-    box-sizing: border-box; // Ensure padding is included in height calculation
+    height: 100vh;
+    overflow: auto;
+    padding: 16px;
+    box-sizing: border-box;
   }
-  

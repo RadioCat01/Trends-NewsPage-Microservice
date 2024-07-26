@@ -1,5 +1,9 @@
+<div class="topPicks">
+  <div class="upper">
 <h1>Search</h1>
-<button (click)="close()">Close</button>
-<div class="news-container">
-  <app-websocket-news-card *ngFor="let article of articles" [article]="article" (click)="openNewsDialog(article)"></app-websocket-news-card>
+    <button (click)="close()" class="close-button">&times;</button>
+  </div>
+  <div class="news-container">
+  <app-news-card *ngFor="let article of articles" [article]="article" (click)="openNewsDialog(article)"></app-news-card>
+</div>
 </div>

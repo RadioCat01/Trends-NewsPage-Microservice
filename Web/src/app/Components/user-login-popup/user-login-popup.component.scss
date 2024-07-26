@@ -1,4 +1,44 @@
-button.selected {
-    background-color: #2196f3; /* Change to your selected color */
+span.selected {
+    background-color: #f57160; /* Change to your selected color */
     color: white; /* Change to your selected text color */
   }
+
+h1{
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.pop{
+  background-color: #2e2e2a;
+  height: 800px;
+
+}
+span{
+  outline: 2px solid rgba(192,73,146, 0.3);
+  padding: 14px;
+  margin:10px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #f57160;
+  cursor: pointer;
+}
+.pref{
+  padding-left: 30px;
+  margin-top: 40px;
+}
+.save{
+  padding: 14px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 18px;
+  background-color: #f57160;
+  border-radius: 25px;
+  color: white;
+  font-weight:600;
+  width: 100px;
+}

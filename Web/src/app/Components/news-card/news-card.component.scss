@@ -1,52 +1,85 @@
-:host {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+img {
+  max-width: 100%;
   display: block;
+  object-fit: cover;
+  max-height: 220px;
+  min-height: 220px;
+  margin-bottom: -6px;
 }
 
-.small-card {
-  padding: 20px;
-  width: 200px;
-  border: 1px solid #ccc;
-  background: #fff;
-  transition: transform 0.3s ease;
-  grid-column: span 1;
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(22rem, calc(22rem + 2vw), 24rem); /* Increase the width */
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #3f3333;
+  transition: 0.2s;
+  background: linear-gradient(to right, #333232, #2e2e2a);
+  height: 420px;
+}
+.card:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  color: #cccccc;
 }
 
-.large-card {
-  padding: 20px;
-  width: 400px;
-  border: 1px solid #ccc;
-  background: #fff;
-  transition: transform 0.3s ease;
-  grid-column: span 5;
-  grid-row: span 5;
+.card__body h4 {
+  margin-top: -2px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  height: 140px;
+  margin-bottom: -10px;
+  line-height: 35px;
+}
+.card__footer {
+  display: flex;
+  padding: 1.1rem;
+  margin-top: -50px;
 }
 
-.small-card:hover, .large-card:hover {
-  transform: scale(1.05);
+.user {
+  display: flex;
+  gap: .5rem;
+  position: relative;
+  bottom: 10px;
 }
 
-.small-card img, .large-card img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px;
+.user__image {
+  border-radius: 50%;
+}
+small{
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  a{
+    color: white;
+  }
+}
+.card__footer .user__info a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Optional: Set a color for the link */
 }
 
-.small-card h2, .large-card h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+.card__footer .user__info a:hover {
+  text-decoration: none; /* Ensure underline is removed on hover */
+  color: white; /* Optional: Change color on hover */
 }
 
-.small-card p, .large-card p {
-  font-size: 1em;
-  margin-bottom: 15px;
-}
-
-.small-card a, .large-card a {
-  font-weight: bold;
-  color: #007bbc;
-  text-decoration: none;
-}
-
-.small-card a:hover, .large-card a:hover {
-  text-decoration: underline;
+.user__info > small {
+  color: #666;
 }

@@ -13,17 +13,13 @@ import { NewsPageComponent } from '../../Components/news-page/news-page.componen
 })
 export class LandingComponent {
 
-  keyword: string = '';
   articles: Article[] = [];
-  largeArticle: Article | null = null;
-  smallArticles: Article[] = [];
-  midSizeArticles: Article[] = [];
 
   constructor(
     public dialog: MatDialog,
     public checkUser: CheckUSerService,
     private newsService: NewsService,
-    private sharedService: SharedService 
+    private sharedService: SharedService
   ) {}
 
   ngOnInit(): void {
@@ -32,12 +28,12 @@ export class LandingComponent {
         this.openDialog();
       }
     });
-  
-    
+
+
     this.sharedService.preferencesUpdated$.subscribe(() => {
       this.loadArticles();
     });
-  
+
     this.sharedService.keyword$.subscribe(keyword => {
       if (keyword) {
         this.newsService.getSearch(5, keyword).subscribe(data => {
@@ -64,7 +60,8 @@ export class LandingComponent {
   openDialog() {
     this.dialog.open(UserLoginPopupComponent, {
       width: '600px',
-      height: '500px'
+      height: '800px',
+      maxWidth: 'none',
     });
   }
 
@@ -87,5 +84,5 @@ export class LandingComponent {
   getCardClass(index: number): string {
     return index % 3 === 0 ? 'small-card': 'large-card';
   }
-  
+
 }
