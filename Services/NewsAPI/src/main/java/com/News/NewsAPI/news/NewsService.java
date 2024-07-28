@@ -58,7 +58,7 @@ public class NewsService {
 
     public Flux<Article> getUpdates() {
 
-        List<String> keywords = Arrays.asList("technology", "science", "health", "business");
+        List<String> keywords = Arrays.asList("technology", "science", "health", "business","sports");
         String keyword = keywords.get(new Random().nextInt(keywords.size()));
 
 
@@ -68,7 +68,7 @@ public class NewsService {
                         .queryParam("q", keyword)
                         .queryParam("from", LocalDate.now().minusDays(1))
                         .queryParam("apikey", "8f864c57490146f69398002a9a51100e")
-                        .queryParam("pageSize", 8)
+                        .queryParam("pageSize", 4)
                         .build()
                 )
                 .retrieve()

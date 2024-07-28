@@ -1,33 +1,48 @@
 .news-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexibly sized columns */
-  column-gap: 5rem; /* Space between columns */
-  row-gap: 1em; /* Space between rows */
-  max-width: 90%; /* Adjusted to increase the width */
-  margin: 0 50px; /* Center the container horizontally */
+  display: flex;
+  justify-content: center;
 }
-
 
 .topPicks {
   max-width: 1700px; /* Adjusted to match the news container */
   border-radius: 40px;
-  background: linear-gradient(to right, #222121, #30302e);
-  //background-color: #1a1a19;
-  outline: 4px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to right, #292929, #292929);
+  outline: 2px solid rgba(91, 91, 91, 0.3);
   padding-bottom: 20px;
+  margin-top: 60px;
 }
+.left{
+  margin-left: -25px;
+  margin-right: 25px;
+}
+.right{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Define 2 equal columns */
+  grid-template-rows: repeat(2, auto); /* Define 2 rows */
+  gap: 1rem;
+}
+
+/* 1x2 card */
+.right > app-history-news-card {
+  grid-column: 1 / span 2; /* Span across 2 columns */
+  grid-row: 1; /* Span across 1 row */
+}
+
+/* 1x1 cards */
+.right > app-websocket-news-card:nth-child(2) {
+  grid-column: 1; /* 1st column */
+  grid-row: 2; /* 2nd row */
+}
+
+.right > app-websocket-news-card:nth-child(3) {
+  grid-column: 2; /* 2nd column */
+  grid-row: 2; /* 2nd row */
+}
+
 h1{
   color: white;
   font-weight: 500;
   font-size: 24px;
   margin-left: 60px;
   padding-top: 20px;
-}
-
-app-history-news-card {
-  grid-column: span 2;
-}
-
-app-news-card {
-  grid-column: span 1; /* Default for regular card */
 }

@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Article, NewsService } from '../../Services/News/NewsService/news.service';
 import { SharedService } from '../../Services/SharedService/shared.service';
 import {Subscription} from "rxjs";
+import {KeycloakService} from "../../Services/Keycloak/keycloak.service";
 
 @Component({
   selector: 'app-nav',
@@ -17,7 +18,8 @@ export class NavComponent {
 
   constructor(
     private newsService: NewsService,
-    private sharedNewsService: SharedService
+    private sharedNewsService: SharedService,
+    private kcs: KeycloakService,
   ) {}
 
   ngOnInit(): void {
@@ -39,4 +41,9 @@ export class NavComponent {
     }
   }
 
+  onLogout():void{
+    this.kcs.logout();
+  }
+
+  protected readonly localStorage = localStorage;
 }

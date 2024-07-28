@@ -3,30 +3,33 @@
   align-items: center;
   justify-content: center;
   border-radius: 25px;
-  background-color: #545452;
-  outline: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: #333331;
+  outline: 2px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  width: 800px;
-  height: 48px;
+  width: 840px;
+  height: 56px;
 }
 
 .search-input {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   border: none;
   padding: 10px 15px;
   flex: 1;
   border-radius: 25px 0 0 25px;
   outline: none;
-  background-color: #545452;
+  background-color: #333331;
   color: white;
 }
 
 .search-icon{
   color: white;
-  font-size: 30px;
+  height: 35px;
+  width: 35px;
+  font-size: 35px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 2px;
 }
 .search-input::placeholder {
   color: #d1d1d1;
@@ -35,15 +38,16 @@
 .nav{
   padding-top: 20px;
   width: 100%;
-  height: 100px;
+  height: 140px;
   padding-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: #242424;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 span{
-  color: #f57160;
+  color: #f84036;
   font-family: Brush Script MT, Brush Script Std, cursive;
   font-size: 60px;
   position: fixed;
@@ -56,6 +60,7 @@ span{
   position: absolute;
   left: 40px;
 }
+
 .logout{
   outline: 2px solid rgba(255, 255, 255, 0.3);
   color: #c5c1c1;
@@ -73,12 +78,12 @@ span{
   justify-content: center;
   align-items: center;
   width: 100%;
-  top: 30px;
+  top: 45px;
 }
 .topics{
   display: flex;
   position: fixed;
-  top: 90px;
+  top: 115px;
   width: 350px;
   justify-content: space-between;
 }
@@ -93,9 +98,6 @@ span{
 
 .topics a.active {
   background-color: #545451;
-  font-weight: bold;
-  border-radius: 15px 15px 0 0;
-}
-html {
-  scroll-behavior: smooth;
+
+  border-radius: 25px;
 }

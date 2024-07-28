@@ -1,6 +1,13 @@
 <div class="topPicks">
   <h1>Top Headings</h1>
   <div class="news-container">
-    <app-websocket-news-card *ngFor="let article of articles" [article]="article" (click)="openNewsDialog(article)"></app-websocket-news-card>
+    <div class="left">
+    <app-wesocket4x4news [article]="articles[0]" (click)="openNewsDialog(articles[0])"></app-wesocket4x4news>
+    </div>
+    <div class="right">
+    <app-history-news-card [article]="articles[1]" (click)="openNewsDialog(articles[1])"></app-history-news-card>
+    <app-websocket-news-card [article]="articles[2]" (click)="openNewsDialog(articles[2])"></app-websocket-news-card>
+    <app-websocket-news-card [article]="articles[3]" (click)="openNewsDialog(articles[3])"></app-websocket-news-card>
+    </div>
   </div>
 </div>

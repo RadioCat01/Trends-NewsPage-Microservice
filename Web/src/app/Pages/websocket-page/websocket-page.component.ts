@@ -28,7 +28,7 @@ export class WebsocketPageComponent {
       data: { article: article },
       maxWidth:'none',
       width:'1200px',
-      height:'100px',
+      height:'1000px',
       enterAnimationDuration:200,
       exitAnimationDuration:200
     });

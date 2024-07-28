@@ -20,14 +20,6 @@ app-nav{
   margin-left: 00px;
 }
 
-.topPicks {
-  max-width: 1700px; /* Adjusted to match the news container */
-  border-radius: 40px;
-  background: linear-gradient(to right, #222121, #30302e);
-  //background-color: #1a1a19;
-  outline: 4px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 20px;
-}
 h1{
   color: white;
   font-weight: 500;
@@ -44,7 +36,7 @@ app-news-card {
   grid-column: span 1; /* Default for regular card */
 }
 .page{
-  background-color: #1a1a19;
+  background-color: #1f1f1f;
   padding-left: 0px;
   padding-bottom: 50px;
   display: flex;

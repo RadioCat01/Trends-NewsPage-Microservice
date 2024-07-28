@@ -28,6 +28,7 @@ import {MatFormField, MatFormFieldModule, MatPrefix} from "@angular/material/for
 import {MatInput, MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {YorPreferencesComponent} from "./Pages/yor-preferences/yor-preferences.component";
+import { Wesocket4x4newsComponent } from './components/wesocket4x4news/wesocket4x4news.component';
 
 export function kcFactory(kcService: KeycloakService){
   return () =>kcService.init();
@@ -48,6 +49,7 @@ export function kcFactory(kcService: KeycloakService){
     HistoryNewsCardComponent,
     SearchComponent,
     YorPreferencesComponent,
+    Wesocket4x4newsComponent,
   ],
   imports: [
     BrowserModule,

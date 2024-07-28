@@ -26,7 +26,7 @@ export class KeycloakService {
   }
 
   async init(){
-    
+
     const authenticated = await this.keycloak.init({
       onLoad: 'login-required'
             }
@@ -38,13 +38,13 @@ export class KeycloakService {
         }
 
   }
-  
+
   login():Promise<void>{
     return this.keycloak?.login();
   }
 
   logout():Promise<void>{
-    const redirectUri = window.location.origin + '/landing';
+    const redirectUri = window.location.origin + '/logout';
     return this.keycloak?.logout();
   }
 

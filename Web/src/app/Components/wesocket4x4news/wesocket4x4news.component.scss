@@ -6,26 +6,26 @@
   margin: 0;
 }
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
   object-fit: cover;
-  max-height: 220px;
-  min-height: 220px;
-  height: 220px;
+  max-height: 660px;
+  min-height: 660px;
   margin-bottom: -6px;
+  background-size: cover;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: clamp(22rem, calc(22rem + 2vw), 24rem); /* Increase the width */
+  width: clamp(44rem, calc(44rem + 4vw), 48rem); /* Increase the width */
+  height: 860px; /* Increase the height */
   overflow: hidden;
   box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 1em;
   background: #3f3333;
   transition: 0.2s;
-  background: linear-gradient(to right, #275787, #243959);
-  height: 420px;
+  background: linear-gradient(to right, #87276c, #243959);
 }
 .card:hover {
   transform: scale(1.02); /* Slight zoom effect on hover */
@@ -40,7 +40,7 @@ img {
 
 .card__body h4 {
   margin-top: -2px;
-  font-size: 1.3rem;
+  font-size: 2rem;
   text-transform: capitalize;
   font-weight: 500;
   height: 140px;

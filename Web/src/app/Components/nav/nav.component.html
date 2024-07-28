@@ -9,7 +9,7 @@
   <mat-icon class="search-icon" (click)="searchNews()">search</mat-icon>
   <input type="text" [(ngModel)]="keyword" placeholder="Search news" class="search-input" />
 </div>
-  <div class="logout">Log out</div>
+  <div class="logout" (click)="onLogout()">Log out</div>
   </div>
   <div class="topics">
     <a routerLink="/landing" fragment="sec1" [ngClass]="{ active: activeFragment === 'sec1' }">Top Headings</a>
