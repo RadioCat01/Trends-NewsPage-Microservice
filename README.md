@@ -44,7 +44,7 @@ Manages user profiles, preferences, and authentication.
 
 ####  News Service:
  Fetches news articles from NewsAPI based on user preferences.
-        Handles data processing and filtering.
+        Handles data processing and filtering
 
 ####  Trends Service:
  Streams real-time trends from Twitter and other social media platforms.
