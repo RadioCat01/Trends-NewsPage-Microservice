@@ -93,7 +93,7 @@ This project combines various technologies and APIs to create a comprehensive an
 
 ---
 #### Gateway
-Configured the security chain and filter to pass the Keycloak Id in passing request's header
+Configured the security chain and filter to pass the Keycloak Id in passing request's headerr
 
       Oauhth2 Resource Server
       Spring WebFlux
