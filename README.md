@@ -1,4 +1,6 @@
-# Personalized News and Trends Dashboard
+
+# Personalized News and Trends Das![Uploading Screenshot 2024-07-29 234111.png…]()
+hboard
 ### Description
 
 Create a personalized dashboard that aggregates and displays real-time news, trends, and insights based on user preferences. This platform can provide users with a tailored experience by offering content that matches their interests, including news articles, social media trends, stock market updates, and more.
