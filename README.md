@@ -9,7 +9,7 @@ Key Features
 
    #### User Profiles and Preferences:
    Allow users to create profiles and select their interests (e.g., technology, sports, finance, entertainment).
-        Save preferences using a user profile microservice backed by a R2DBC-enabled PostgreSQL databas
+        Save preferences using a user profile microservice backed by a R2DBC-enabled PostgreSQL database
 
    #### News Aggregation:
 Integrate NewsAPI to fetch the latest news articles based on user interests.
