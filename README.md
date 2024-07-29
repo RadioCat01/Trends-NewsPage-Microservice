@@ -72,7 +72,7 @@ Manages real-time notifications and alerts using Kafka.
 
   ####  Machine Learning Integration:
  Use machine learning to analyze user behavior and improve content recommendations.
-        Implement sentiment analysis on news articles and social media trends.
+        Implement sentiment analysis on news articles and social media trends
 
    #### Social Sharing:
 Allow users to share interesting articles and trends on social media platforms.
