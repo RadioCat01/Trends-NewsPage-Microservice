@@ -41,7 +41,6 @@ Design a user-friendly and interactive dashboard using modern front-end technolo
 ####  User Service:
 Manages user profiles, preferences, and authentication.
         Uses R2DBC for reactive database interactions.
-
 ####  News Service:
  Fetches news articles from NewsAPI based on user preferences.
         Handles data processing and filtering
