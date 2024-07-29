@@ -110,7 +110,7 @@ Accepts Request with preferences in request body and headers to save user ( if n
 
 
 ### Frontend
-configured keycloak service, token Inteceptor, Auth Guard to work with key cloak 
+configured keycloak service, token Inteceptor, Auth Guard to work with key cloa
 
 #### NewsAPi
 used web client to fetch news from news api
