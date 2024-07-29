@@ -5,6 +5,7 @@ import { CheckUSerService } from '../../Services/User/check-user.service';
 import { Article, NewsService } from '../../Services/News/NewsService/news.service';
 import { SharedService } from '../../Services/SharedService/shared.service';
 import { NewsPageComponent } from '../../Components/news-page/news-page.component';
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-landing',
@@ -19,11 +20,12 @@ export class LandingComponent {
     public dialog: MatDialog,
     public checkUser: CheckUSerService,
     private newsService: NewsService,
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private router : Router
   ) {}
 
   ngOnInit(): void {
-
+    window.scrollTo(0, 0);
     this.checkUser.checkUser().subscribe(exists => {
       if (!exists) {
         this.openDialog();

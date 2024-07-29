@@ -8,12 +8,12 @@
 }
 
 .topPicks {
-  margin-top: 20px;
+  margin-top: 90px;
+  margin-bottom: -60px;
   max-width: 100%; /* Adjusted to match the news container */
   border-radius: 40px;
-  background: linear-gradient(to right, #222121, #30302e);
-  //background-color: #1a1a19;
-  outline: 4px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to right, #292929, #292929);
+  outline: 2px solid rgba(91, 91, 91, 0.3);
   padding-bottom: 20px;
 
 }

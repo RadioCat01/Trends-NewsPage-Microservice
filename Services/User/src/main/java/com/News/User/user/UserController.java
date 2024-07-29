@@ -21,6 +21,7 @@ public class UserController {
             @RequestBody UserRequest request,
             @RequestHeader("User-ID") String UserId
     ){
+        log.info("Saving user");
         return service.saveUser(request,UserId);
     }
 
@@ -28,6 +29,7 @@ public class UserController {
     public ResponseEntity<Boolean> checkUser(
             @RequestHeader("User-ID") String UserId
     ){
+        log.info("checking user called");
         return service.checkUser(UserId);
     }
 
@@ -35,6 +37,7 @@ public class UserController {
     public Mono<List<String>> getPrefById(
             @RequestParam("id") String id
     ){
+        log.info("get preferences called");
         return service.getPref(id);
     }
 

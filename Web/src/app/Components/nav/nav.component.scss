@@ -30,6 +30,7 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 2px;
+  cursor: pointer;
 }
 .search-input::placeholder {
   color: #d1d1d1;
@@ -52,6 +53,7 @@ span{
   font-size: 60px;
   position: fixed;
   left: 80px;
+  cursor: none;
 }
 .bi-clipboard-data-fill{
   color: #b9b9b9;
@@ -59,6 +61,7 @@ span{
   width: 40px;
   position: absolute;
   left: 40px;
+  cursor: none;
 }
 
 .logout{
@@ -71,6 +74,7 @@ span{
   border-radius: 25px;
   position: absolute;
   right: 30px;
+  cursor: pointer;
 }
 .cont{
   position: fixed;

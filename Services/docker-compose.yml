@@ -40,6 +40,14 @@ services:
     networks:
       - News-net
 
+  zipkin:
+    container_name: NewsPageZipkin
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - News-net
+
   kafka:
     image: confluentinc/cp-kafka:latest
     container_name: NewsKafka

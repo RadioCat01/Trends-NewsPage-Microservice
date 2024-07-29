@@ -42,7 +42,7 @@ public class NewsService {
         this.newsWebSocketHandler= newsWebSocketHandler;
     }
 
-    @Scheduled(fixedRate = 240000)
+    @Scheduled(fixedRate = 20000)
     public void fetchAndBroadcastNews() {
 
         getUpdates()
@@ -58,7 +58,7 @@ public class NewsService {
 
     public Flux<Article> getUpdates() {
 
-        List<String> keywords = Arrays.asList("technology", "science", "health", "business","sports");
+        List<String> keywords = Arrays.asList( "science", "health", "business","sports");
         String keyword = keywords.get(new Random().nextInt(keywords.size()));
 
 
