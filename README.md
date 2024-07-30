@@ -39,11 +39,7 @@ Uses Netflix Eureka fot dynamic detection and handling load balancing and realat
     Frontend: Angular, TypeScript
     APIs: NewsAPI
 ---
-# Development
 
-### MicroService Architecture
-
-#### Config + Discovery 
 
 
 
