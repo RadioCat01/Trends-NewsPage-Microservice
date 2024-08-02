@@ -15,3 +15,4 @@ management:
   tracing:
     sampling:
       probability: 1.0
+

@@ -14,7 +14,7 @@ spring:
           predicates:
             - Path=/news/**
         - id: history
-          uri: lb:http://History
+          uri: lb:http://HISTORY
           predicates:
             - Path=/history/**
 server:

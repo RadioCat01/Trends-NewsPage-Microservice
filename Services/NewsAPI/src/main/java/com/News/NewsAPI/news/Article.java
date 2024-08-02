@@ -7,6 +7,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @RequiredArgsConstructor
+@Builder
 public class Article {
 
     private Source source;

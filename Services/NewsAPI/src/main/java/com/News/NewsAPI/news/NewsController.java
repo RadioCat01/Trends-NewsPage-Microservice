@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 
 @RestController
@@ -48,6 +49,13 @@ public class NewsController {
         producer.sendMessage(message);
         return null;
     }
+
+    @GetMapping("/pref")
+    public Mono<String> getPref(@RequestParam("id") String id){
+        return newsService.getPreferences(id);
+    }
+
+
 }
 
 

@@ -4,6 +4,9 @@ import com.News.NewsAPI.finance.AlphaVantageResponse;
 import com.News.NewsAPI.websocket.NewsWebSocketHandler;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
@@ -42,7 +45,7 @@ public class NewsService {
         this.newsWebSocketHandler= newsWebSocketHandler;
     }
 
-    @Scheduled(fixedRate = 20000)
+    @Scheduled(fixedRate = 250000)
     public void fetchAndBroadcastNews() {
 
         getUpdates()
@@ -54,8 +57,6 @@ public class NewsService {
                 })
                 .subscribe();
     }
-
-
     public Flux<Article> getUpdates() {
 
         List<String> keywords = Arrays.asList( "science", "health", "business","sports");
@@ -77,7 +78,8 @@ public class NewsService {
                 .doOnNext(article -> log.info("parsed article: {}", article));
     }
 
-
+    @CircuitBreaker(name = "NewsAPiCircuitBreaker")
+    @Retry(name = "NewsAPiCircuitBreaker", fallbackMethod = "fallback")
     public Flux<Article> getNews(int pageSize,String id) {
 
         return getPreferences(id)
@@ -95,8 +97,15 @@ public class NewsService {
                 );
     }
 
+    public Flux<Article> fallback(int pageSize, String id, Throwable t) {
+        log.error("Fallback method called due to: {}", t.getMessage());
+        return Flux.just(Article.builder()
+                        .title("Hey there We're having a problem right now")
+                .build());
+    }
 
     public Mono<String> getPreferences(String id) {
+        System.out.printf("getpref called");
         return this.userClient.get()
                 .uri("/getPref?id={id}", id)
                 .retrieve()
@@ -105,7 +114,7 @@ public class NewsService {
                 .doOnNext(k -> log.info(k));
     }
 
-
+    @RateLimiter(name = "NewsAPiCircuitBreaker")
     public Flux<Article> search(int pageSize, String search) {
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
