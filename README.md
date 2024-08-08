@@ -1,9 +1,8 @@
+Trends(TM) - Personalized News and Trends Dashboard that provides topics under user preferences, search news, keep track of user clicks, analyze the clicked news to update preferences. ( Some functionalities may not have followed the best practices as this project is for learning purposes ) 
 
 ![Screenshot 2024-07-29 234111](https://github.com/user-attachments/assets/9e8c5ef6-1bb3-4bc6-911a-0d8a481c3b33)
 
 # Personalized News and Trends Dashboard
-### Description 
-Trends(TM) - Personalized News and Trends Dashboard that provides topics under user preferences, search news, keep track of user clicks, analyze the clicked news to update preferences. ( Some functionalities may not have followed the best practices as this project is for learning purposes ) 
 
    #### User Profiles and Preferences:
 Users are managed through keycloak security, upon registration and loging user preferences are taken and persisted and laterly updated based on user's news views.
