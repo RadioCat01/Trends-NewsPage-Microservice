@@ -33,11 +33,30 @@ public class HistoryController {
 
     private final AnalyticService analyticService;
 
+
     @GetMapping("/pref")
-    public void send(){
-        System.out.println("pref called");
-        analyticService.sendAllSourceNames();
+    public Mono<Void> send() {    // with `public void send(){} ` the reactive chain is not subscribed!
+        return analyticService.sendAllSourceNames()
+                .doOnSubscribe(subscription -> System.out.println("Subscribed"))
+                .doOnTerminate(() -> System.out.println("Terminated"));
     }
+/*
+   @GetMapping("/pref")
+    public void send(){
+        analyticService.sendAllSourceNames().subscribe();
+    }
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
