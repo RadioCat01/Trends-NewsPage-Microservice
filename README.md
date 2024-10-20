@@ -1,4 +1,7 @@
-Trends(TM) - Personalized News and Trends Dashboard that provides topics under user preferences, search news, keep track of user clicks, analyze the clicked news to update preferences. ( Some functionalities may not have followed the best practices as this project is for learning purposes ) 
+# Trends(TM) 
+Personalized News and Trends Dashboard that provides topics under user preferences, search news, keep track of user clicks, analyze the clicked news to update preferences. ( Some functionalities may not have followed the best practices as this project is for learning purposes ) 
+
+https://github.com/user-attachments/assets/94e2ca79-4cef-4cfe-bc73-9dd93077130a
 
 ![Screenshot 2024-07-29 234111](https://github.com/user-attachments/assets/9e8c5ef6-1bb3-4bc6-911a-0d8a481c3b33)
 
